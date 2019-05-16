@@ -1,17 +1,42 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "di-server",
+  "description": "> Project description",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-  },
-  "dependencies": {
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon --ignore node_modules server/index.js"
   },
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.2.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+  },
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.16.4",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.9.6",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "request": "^2.81.0",
+    "bluebird": "^3.3.4",
+    "lodash": "^4.17.4"
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fec4/di-Server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fec4/di-Server/issues"
+  },
+  "homepage": "https://github.com/fec4/di-Server#readme"
 }
