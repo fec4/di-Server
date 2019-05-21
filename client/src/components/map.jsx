@@ -5,12 +5,12 @@ import API from './api'
 function Map(props) {
   console.log(props);
   console.log(props.markers);
-  const [selectedPark, setSelectedPark] = useState(null);
+  const [selectedMark, setSelectedMark] = useState(null);
 
   useEffect(() => {
     const listener = e => {
       if (e.key === "Escape") {
-        setSelectedPark(null);
+        setSelectedMark(null);
       }
     };
     window.addEventListener("keydown", listener);
@@ -29,14 +29,32 @@ function Map(props) {
       {props.markers.map((park,index) => (
 
         <Marker
-
+          key={index}
           position={{
             lat: park.lat,
             lng: park.lng,
           }}
-
+          onClick={() => {
+            setSelectedMark(park);
+          }}
         />
       ))}
+            {selectedMark && (
+        <InfoWindow
+          onCloseClick={() => {
+            setSelectedMark(null);
+          }}
+          position={{
+            lat: selectedMark.lat,
+            lng: selectedMark.lng
+          }}
+        >
+          <div>
+            <h2>{selectedMark.name}</h2>
+            <p>{selectedMark.des}</p>
+          </div>
+        </InfoWindow>
+      )}
 
 
     </GoogleMap>

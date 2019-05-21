@@ -8,7 +8,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       listing: [1, 2, 3],
-      markers:[{ lat: 37.7875711, lng: -122.3966922 }, { lat: 38.7875711, lng: -122.3966922 }]
+      markers:[{ lat: 37.7875711, lng: -122.3966922 , des:'Hi Adam',name:'Yo'}, { lat: 38.7875711, lng: -122.3966922 ,des:'the hooks feature is amazing',name:'whatsup'}]
 
     }
 
@@ -28,7 +28,7 @@ class App extends React.Component {
           }`}
           markers={this.state.markers}
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: "50vh",width:'50vh'}} />}
+          containerElement={<div style={{ height: "100vh",width:'100vh'}} />}
           mapElement={<div style={{ height: `100%` }} />}
 
 />
