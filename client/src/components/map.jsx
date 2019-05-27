@@ -21,28 +21,35 @@ function Map(props) {
   }, []);
 
   return (
+
     <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{ lat: 37.7875711, lng: -122.3966922  }}
+      defaultZoom={14}
+
+      center={props.defaultCenter}
 
     >
-      {props.markers.map((park,index) => (
+      {props.markers.map((e,index) => {
+         return(
 
         <Marker
           key={index}
           position={{
-            lat: park.lat,
-            lng: park.lng,
+            lat: e.lat,
+            lng: e.lng,
           }}
           onClick={() => {
-            setSelectedMark(park);
+            console.log(e);
+            setSelectedMark(e);
+            props.markerClicked(e)
           }}
         />
-      ))}
-            {selectedMark && (
+      )})}
+            {
+              selectedMark && (
         <InfoWindow
           onCloseClick={() => {
             setSelectedMark(null);
+            props.markerClicked(null);
           }}
           position={{
             lat: selectedMark.lat,
