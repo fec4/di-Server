@@ -6,7 +6,7 @@ export default function place(props) {
     console.log(e);
   }
   return(
-    <div>
+    <table>
       {props.listing.map((e,index)=>{
 
         return(
@@ -30,7 +30,7 @@ export default function place(props) {
       {
 
       }
-      </div>
+      </table>
 
   )
 

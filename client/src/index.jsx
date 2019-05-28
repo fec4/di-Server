@@ -4,6 +4,7 @@ import Map from './components/map.jsx';
 import GoogleMap from 'google-map-react';
 import API from './components/api'
 import Place from './components/place.jsx';
+import Search from './components/searchBar.jsx';
 class App extends React.Component {
   constructor() {
     super();
@@ -36,7 +37,7 @@ class App extends React.Component {
 
     return (
       <div>
-        hihihihih
+        <Search />
         <br></br>
         Hello world
         <br></br>
@@ -46,7 +47,8 @@ class App extends React.Component {
             (<Map
               isMarkerShown={true}
               defaultCenter={{lat:this.state.markers[0].lat,lng:this.state.markers[0].lng}}
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${API}
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+
             `}
               markers={this.state.markers}
               markerClicked={this.selectHighLightListing.bind(this)}
@@ -62,7 +64,8 @@ class App extends React.Component {
               isMarkerShown={true}
               defaultCenter={{lat:this.state.singleMarker.lat,lng:this.state.singleMarker.lng}}
               defaultZoom={10}
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${API}`}
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+              `}
               markers={[this.state.singleMarker]}
               markerClicked={this.selectHighLightListing.bind(this)}
               loadingElement={<div style={{ height: `100%` }} />}
@@ -81,7 +84,11 @@ class App extends React.Component {
             />)
 
           }
+
         </div>
+
+
+
       </div>
     )
   }
