@@ -1,0 +1,19 @@
+
+
+.searchbar {
+  font-size: 2.4rem;
+  width: 25rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+  box-shadow: 0 1rem 2rem rgba(black, .1);
+  padding: 2rem;
+  position: relative;
+  transition: all .2s;
+  transition-delay: .1s;
+}
+.searchbar:hover {
+  width: 27rem;
+  height: 6rem;
+}

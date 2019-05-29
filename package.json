@@ -27,9 +27,10 @@
     "jquery": "^3.1.1",
     "lodash": "^4.17.4",
     "mongoose": "^4.13.18",
-    "react": "16.7.0-alpha.0",
+    "react": "^16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
     "react-google-maps": "^9.4.5",
+    "react-places-autocomplete": "^7.2.1",
     "request": "^2.81.0"
   },
   "version": "1.0.0",
